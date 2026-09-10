@@ -1,0 +1,1 @@
+https://tcg-arena.fr/load/aHR0cHMlM0ElMkYlMkZhc2hsZXlib3QwOTAyLmdpdGh1Yi5pbyUyRlNwYWNlLVdpemFyZHMlMkZnYW1lX2ZpbGUuanNvbg==
