@@ -36,9 +36,21 @@
 				"drawOnStart": false,
 				"drawPerTurn": 1
 			},
-			"countersStartingValues": [],
+			"countersStartingValues": [
+				0
+			],
 			"sections": {
 				"layout": {
+					"customSections": [
+						"Planet 1",
+						"Planet 2",
+						"Energy Slot 1",
+						"Energy Slot 2",
+						"Energy Slot 3",
+						"Energy Slot 4",
+						"Energy Slot 5",
+						"Energy Slot 6"
+					],
 					"direction": "column",
 					"content": [
 						{ 
