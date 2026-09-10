@@ -1,0 +1,16 @@
+{
+  "cardId": {
+    "id": "OG244",
+    "face": {
+      "front": {
+        "name": { "name": "AT Replacement MK 1" },
+        "type": "Capsule",
+        "cost": 0,
+        "image": "https://ashleybot0902.github.io/Space-Wizards/AT%20Replacement%20MK%201.png"
+      }
+    },
+    "name": "AT Replacement MK 1",
+    "type": "Capsule",
+    "cost": 0
+  }
+}
