@@ -1,33 +1,96 @@
 {
-  "name": "Space Wizards",
-  "deckBuilding": {
-    "mainFilters": ["type", "cost"],
-    "formats": [
-      { "title": "Standard format", "gameplay": "Standard" }
-    ]
-  },
-  "gameplay": {
-    "Standard": {
-      "mulligan": { 
-        "startingHandSize": 5 
-      },
-      "newTurn": { 
-        "drawPerTurn": 1 
-      },
-      "countersStartingValues": [],
-      "sections": {
-        "layout": {
-          "direction": "column",
-          "content": [{ "section": "Board" }]
-        },
-        "sectionsDict": {
-          "Board": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" }
-        }
-      }
-    }
-  },
-  "cards": {
-    "dataUrl": "https://ashleybot0902.github.io/Space-Wizards/card_file.json",
-    "cardBack": "https://ashleybot0902.github.io/Space-Wizards/bordermask.png"
-  }
+	"name": "Space Wizards",
+	"deckBuilding": {
+		"mainFilters": ["type", "cost"],
+		"formats": [
+			{
+				"title": "Standard format",
+				"gameplay": "Standard",
+				"deckRulesets": "Constructed"
+			}
+		],
+		"deckRulesets": {
+			"Constructed": {
+				"general": { "min": 40, "max": 40, "maxPerCard": 3 },
+				"categories": [
+					{ "category": "Capsules", "min": 15, "max": 15 },
+					{ "category": "Planet", "min": 1, "max": 1 },
+					{ "category": "Structures", "min": 1, "max": 3" },
+					{ "category": "Sideboard", "min": 0, "max": 12 }
+				]
+			}
+		}
+	},
+	"gameplay": {
+		"Standard": {
+			"mulligan": {
+				"startingHandSize": 5,
+				"mulliganCount": { "max": 1 },
+				"mulliganCycle": {
+					"info": "You put up to two cards from your hand on the bottom of your deck then draw that many cards.",
+					"steps": ["toBottom", "draw"],
+					"selectionRange": { "max": 2 }
+				}
+			},
+			"newTurn": {
+				"drawOnStart": false,
+				"drawPerTurn": 1
+			},
+			"countersStartingValues": [],
+			"sections": {
+				"layout": {
+					"direction": "column",
+					"content": [
+						{ 
+							"direction": "row",
+							"content": [
+								{ "section": "Planet 1" },
+								{ "section": "Planet 2" }
+							]
+						},
+						{
+							"direction": "row",
+							"content": [
+								{ "section": "Energy Slot 1" },
+								{ "section": "Energy Slot 2" },
+								{ "section": "Energy Slot 3" },
+								{ "section": "Energy Slot 4" },
+								{ "section": "Energy Slot 5" },
+								{ "section": "Energy Slot 6" }
+							]
+						}
+					]
+				},
+				"autoPlayFromHand": {
+                    "Augment": "Stack",
+					"Sorcery": "Stack",
+                    "Structure": "Stack",
+                    "Tech": "Stack",
+                    "Unit": "Stack"
+                },
+                "autoPlayFromStack": {
+                    "Augment": "GROUP",
+                    "Sorcery": "Discard",
+                    "Structure": "Planet 1",
+                    "Tech": "Planet 1",
+					"Unit": "Planet 1"
+                },
+				"sectionsDict": {
+					"Planet 1": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Planet 2": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Energy Slot 1": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Energy Slot 2": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Energy Slot 3": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Energy Slot 4": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Energy Slot 5": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Energy Slot 6": { "isHidden": "no", "height": "MEDIUM", "alignment": "CENTER" },
+					"Extra-deck": { "isHidden": "yes", "height": "MEDIUM", "alignment": "DECK", "displayedTitle": "Extra deck" }
+				}
+			}
+		}
+	},
+	"cards": {
+		"dataUrl": "https://ashleybot0902.github.io/Space-Wizards/card_file.json",
+		"cardBack": "https://ashleybot0902.github.io/Space-Wizards/bordermask.png"
+	}
 }
