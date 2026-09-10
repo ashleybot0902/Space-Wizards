@@ -12,5 +12,33 @@
     "name": "AT Replacement MK 1",
     "type": "Capsule",
     "cost": 0
+  },
+  "OG109": {
+    "id": "OG109",
+    "face": {
+      "front": {
+        "name": { "name": "Aether Priest" },
+        "type": "Unit",
+        "cost": 4,
+        "image": "https://ashleybot0902.github.io/Space-Wizards/Aether%20Priest.png"
+      }
+    },
+    "name": "Aether Prist",
+    "type": "Unit",
+    "cost": 4
+  },
+  "OG055": {
+    "id": "OG055",
+    "face": {
+      "front": {
+        "name": { "name": "Blizzard" },
+        "type": "Sorcery",
+        "cost": 5,
+        "image": "https://ashleybot0902.github.io/Space-Wizards/Blizzard.png"
+      }
+    },
+    "name": "Blizzard",
+    "type": "Sorcery",
+    "cost": 5
   }
 }
