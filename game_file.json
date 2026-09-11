@@ -33,12 +33,10 @@
 				}
 			},
 			"newTurn": {
-				"drawOnStart": false,
+				"drawOnStart": true,
 				"drawPerTurn": 1
 			},
-			"countersStartingValues": [
-				0
-			],
+			"countersStartingValues": [ 7, 7, 7 ],
 			"sections": {
 				"layout": {
 					"customSections": [
